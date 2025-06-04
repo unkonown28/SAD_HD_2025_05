@@ -16,3 +16,4 @@ Each principle has:
 4. ISP – Interface Segregation Principle
 5. DIP – Dependency Inversion Principle
 
+Submitted by: Sersani Prashanth
