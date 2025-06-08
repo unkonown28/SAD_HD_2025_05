@@ -3,6 +3,10 @@ package SOLID;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * 👇 This class only stores user data.
+ * Originally, it also saved to a file, which is a second responsibility.
+ */
 class User {
     private final String fullName;
     private final String contact;
@@ -21,6 +25,10 @@ class User {
     }
 }
 
+/**
+ * 👇 New class added to handle file I/O separately.
+ * This separates concerns: data vs. persistence.
+ */
 class UserFileManager {
     public void store(User user) {
         try (FileWriter writer = new FileWriter(user.getFullName() + "_info.txt")) {
@@ -36,7 +44,6 @@ public class SRP_01 {
     public static void main(String[] args) {
         User u = new User("Alice", "alice@domain.com");
         UserFileManager manager = new UserFileManager();
-        manager.store(u);
+        manager.store(u); // Delegating file saving responsibility
     }
 }
-
