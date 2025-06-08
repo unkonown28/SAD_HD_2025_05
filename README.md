@@ -7,7 +7,8 @@
 
 ## SOLID Principle Solutions – Java
 
-This repository contains **Java examples** demonstrating the SOLID principles of object-oriented programming.
+This reopository contains **Java examples**  demonstrating both **violations** and **correct applications** of the SOLID principles of object-oriented design.
+
 
 ## 📁 Folder: SOLID_solutions/
 
