@@ -1,23 +1,43 @@
 package SOLID;
 
-public class SRP_02 {
+/**
+ * 👇 This class now only holds the employee ID.
+ * Originally, it also handled salary, designation, and email!
+ */
+class Worker {
+    int id;
 
-    /*
-     * TASK:
-     * Just make this class obeying the SRP (Single Responsibility Principle)!
-     * The method bodies are empty by purpose and there is no main provided.
-     */
-    
-    public static class Employee {
-        public String getDesignation(int employeeID) {
-            // empty
-            return "";
-        }
-        public void updateSalary(int employeeID) {
-            // empty
-        }
-        public void sendMail() {
-            // empty
-        }
+    public Worker(int id) {
+        this.id = id;
     }
 }
+
+/**
+ * 👇 Class handles title responsibilities (SRP fix).
+ */
+class DesignationLogic {
+    public String fetchTitle(int id) {
+        return "Developer";
+    }
+}
+
+/**
+ * 👇 Class handles salary update logic.
+ */
+class Compensation {
+    public void revisePay(int id) {
+        // salary update logic here
+    }
+}
+
+/**
+ * 👇 Class manages communication only.
+ */
+class Communication {
+    public void dispatchMail() {
+        // send mail logic here
+    }
+}
+
+public class SRP_02 {}
+
